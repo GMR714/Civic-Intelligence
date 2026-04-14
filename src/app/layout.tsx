@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
+import { ConnectWalletModal } from "@/components/ConnectWalletModal";
+import { OnboardingWizard } from "@/components/OnboardingWizard";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -15,7 +17,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Ipê Civic Intelligence Platform",
-  description: "Data-driven community consensus and governance",
+  description: "Data-driven community consensus and governance — Florianópolis",
 };
 
 export default function RootLayout({
@@ -25,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${inter.variable} ${spaceGrotesk.variable} dark antialiased h-full`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Navigation />
+        <ConnectWalletModal />
+        <OnboardingWizard />
         <main className="flex-1 flex flex-col pt-6 pb-12">
           {children}
         </main>
