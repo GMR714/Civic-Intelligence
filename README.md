@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Civic Intelligence Platform 🧬🏙️
 
-## Getting Started
+**Empowering communities through data-driven consensus and nuanced governance.**
 
-First, run the development server:
+The Civic Intelligence Platform is a high-fidelity frontend MVP designed to facilitate structured, intelligent community feedback on policy proposals. It aim to replace the "noise" of traditional unstructured feedback with a multi-dimensional, anonymous, and data-driven process that finds true community consensus.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 The Vision
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> "**Every citizen has the opportunity to speak their mind and be heard through a nuanced, data-driven, and entirely anonymous process.**"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Traditional voting is often binary (Yes/No) and discussion is often fragmented. This platform bridges that gap by providing citizens with the tools to understand complex policies and provide precise, multi-dimensional feedback.
 
-## Learn More
+### 🏛️ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Impact Matrix**: See exactly who a proposal helps, who it negatively impacts, and what it costs.
+- **ELI5 Summaries**: AI-powered "Explain Like I'm 5" abstracts to make complex legal/economic text accessible to everyone.
+- **SME Context Notes**: Verified fact-checks and context from Subject Matter Experts.
+- **Multi-Dimensional Voting**: Rate proposals on specific axes like *Fairness*, *Feasibility*, and *Vision* rather than a simple thumbs up/down.
+- **The "Why" Matrix**: If you disapprove, select structured reasons (Cost, Lack of Evidence, Misaligned Priorities) to provide actionable data to decision-makers.
+- **Threshold Revealing Anonymity**: Demographic data (age, education, economic status) is only revealed for groups larger than 10 participants, ensuring individual privacy while maintaining data richness.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Philosophy: "Techno-Optimist"
 
-## Deploy on Vercel
+Inspired by **Florianópolis 2026** and "Ipê City" vibes, the platform blends Web3 cyberpunk aesthetics with nature-inspired biology logic.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Aesthetic**: Dark mode by default (Charcoal/Deep Black).
+- **Accents**: Bioluminescent colors—Electric Yellow, Deep Magenta, and Vibrant Green.
+- **Layout**: Bento-box dashboarding with modern glassmorphism (frosted glass) panels.
+- **Motion**: Fluid, spring-loaded transitions via Framer Motion to make dense data feel responsive and alive.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 14+](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Web3 Connector**: [Wagmi](https://wagmi.sh/) & [RainbowKit](https://www.rainbowkit.com/) (Coming in Phase 2)
+
+---
+
+## 🗺️ Roadmap & Status
+
+The project is being developed in 5 distinct phases:
+
+1.  ✅ **Phase 1: Project Setup & Design System** - Foundations, theme, and mock data engine.
+2.  📅 **Phase 2: Authentication & Mock Identity** - Web3 Connect and demographic onboarding.
+3.  ⏳ **Phase 3: Proposal Discovery & Detail** - Bento-box UI for reading proposals.
+4.  ⏳ **Phase 4: Feedback Mechanism** - Multi-dimensional voting UI.
+5.  ⏳ **Phase 5: Analytics Dashboard Engine** - Sentiment heatmaps and consensus visualization.
+
+---
+
+## 🚀 Getting Started
+
+1.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+2.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+3.  **Open the app**: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🤝 Contributing
+
+We use a high-granularity, atomic workflow. Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our coding standards, branch strategy, and the GSD workflow.
