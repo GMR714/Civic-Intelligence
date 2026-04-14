@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "@/components/Navigation";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -28,14 +29,8 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} dark antialiased h-full`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <header className="w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container mx-auto flex h-14 items-center px-4">
-            <h1 className="font-heading font-bold text-xl tracking-tight text-foreground">
-              Ipê <span className="text-ipe-green">Civic</span>
-            </h1>
-          </div>
-        </header>
-        <main className="flex-1 flex flex-col">
+        <Navigation />
+        <main className="flex-1 flex flex-col pt-6 pb-12">
           {children}
         </main>
       </body>
