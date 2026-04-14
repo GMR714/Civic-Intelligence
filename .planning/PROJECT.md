@@ -14,32 +14,33 @@ Every citizen has the opportunity to speak their mind and be heard through a nua
 
 <!-- Shipped and confirmed valuable. -->
 
-(None yet — ship to validate)
+- [x] [Req 1] Project Architecture and Mock Data (Frontend only, Next.js App Router, Tailwind, Shadcn).
+- [x] [Req 2] User can connect wallet/digital passport via Wagmi and RainbowKit (Mocked UI).
+- [x] [Req 3] User can view proposals featuring an Impact Matrix (Who this helps, Who it negatively impacts, Costs).
+- [x] [Req 4] User can view AI-simplified ELI5/High-school summaries of complex proposals (Static dummy).
+- [x] [Req 5] User can view neutral context and fact-check notes from verified Subject Matter Experts.
+- [x] [Req 6] User can submit multi-dimensional feedback (rating specific aspects like fairness, feasibility) (UI).
+- [x] [Req 7] User can choose from a "Why" matrix of structured reasons when disapproving, with optional text comments.
+- [x] [Req 8] User can view dynamic dashboard and change their vote during the 1-week polling window.
+- [x] [Req 9] Dashboard displays Sentiment Heatmaps (approval vs demographics like age, economics, education).
+- [x] [Req 10] Dashboard displays AI Topic Extraction summaries (Top Community Concerns) from written feedback.
+- [x] [Req 11] Dashboard features a "Consensus Finder" highlighting areas of agreement across opposing groups.
+- [x] [Req 12] Demographics are displayed with threshold revealing (hiding groups with <10 participants to preserve anonymity).
 
 ### Active
 
 <!-- Current scope. Building toward these. -->
 
-- [ ] [Req 1] Project Architecture and Mock Data (Frontend only, Next.js App Router, Tailwind, Shadcn).
-- [ ] [Req 2] User can connect wallet/digital passport via Wagmi and RainbowKit.
-- [ ] [Req 3] User can view proposals featuring an Impact Matrix (Who this helps, Who it negatively impacts, Costs).
-- [ ] [Req 4] User can view AI-simplified ELI5/High-school summaries of complex proposals.
-- [ ] [Req 5] User can view neutral context and fact-check notes from verified Subject Matter Experts.
-- [ ] [Req 6] User can submit multi-dimensional feedback (rating specific aspects like fairness, feasibility).
-- [ ] [Req 7] User can choose from a "Why" matrix of structured reasons when disapproving, with optional text comments.
-- [ ] [Req 8] User can view dynamic dashboard and change their vote during the 1-week polling window.
-- [ ] [Req 9] Dashboard displays Sentiment Heatmaps (approval vs demographics like age, economics, education).
-- [ ] [Req 10] Dashboard displays AI Topic Extraction summaries (Top Community Concerns) from written feedback.
-- [ ] [Req 11] Dashboard features a "Consensus Finder" highlighting areas of agreement across opposing groups.
-- [ ] [Req 12] Demographics are displayed with threshold revealing (hiding groups with <10 participants to preserve anonymity).
+- [ ] [Req 13] Real backend integration (Database modeling, Server Actions/APIs).
+- [ ] [Req 14] Live AI LLM integration for dynamic topic extraction and ELI5 generation.
+- [ ] [Req 15] Real Web3 Smart Contract integration for storing hashes/outcomes on chain.
+- [ ] [Req 16] Actual cryptographic Zero-Knowledge Proof generation for anonymous identity verification.
 
 ### Out of Scope
 
 <!-- Explicit boundaries. Includes reasoning to prevent re-adding. -->
 
-- **Backend Logic / Databases**: Phase 1 is strictly about building a high-fidelity frontend with mocked data to validate UI/UX.
-- **Smart Contracts / On-chain execution**: Skipped for now to focus purely on the frontend interaction layer.
-- **Real ZKP implementation**: Conceptually simulated for the MVP; onboarding and zero-knowledge proof identity steps will be visually mocked.
+- **Mobile App**: The current focus is strictly Web App responsiveness. Native mobile builds (React Native, Flutter) will be deferred until post v2.
 
 ## Context
 

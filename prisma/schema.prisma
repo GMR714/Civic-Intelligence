@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                   String  @id @default(cuid())
+  walletAddress        String  @unique
+  ageRange             String?
+  education            String?
+  economicStatus       String?
+  politicalOrientation String?
+  votes                Vote[]
+  createdAt            DateTime @default(now())
+}
+
+model Proposal {
+  id        String   @id @default(cuid())
+  title     String
+  abstract  String
+  eli5      String?
+  status    String   @default("active")
+  deadline  DateTime
+  
+  helps     Impact[] @relation("HelpsImpact")
+  hurts     Impact[] @relation("HurtsImpact")
+  costs     Impact[] @relation("CostsImpact")
+  
+  smeNotes  SMENote[]
+  votes     Vote[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Impact {
+  id           String    @id @default(cuid())
+  name         String
+  helpsPropID  String?
+  hurtsPropID  String?
+  costsPropID  String?
+
+  helpsProp    Proposal? @relation("HelpsImpact", fields: [helpsPropID], references: [id], onDelete: Cascade)
+  hurtsProp    Proposal? @relation("HurtsImpact", fields: [hurtsPropID], references: [id], onDelete: Cascade)
+  costsProp    Proposal? @relation("CostsImpact", fields: [costsPropID], references: [id], onDelete: Cascade)
+}
+
+model SMENote {
+  id          String   @id @default(cuid())
+  proposalId  String
+  author      String
+  credential  String
+  text        String
+  proposal    Proposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+}
+
+model Vote {
+  id                  String   @id @default(cuid())
+  userId              String
+  proposalId          String
+  fairness            Float
+  feasibility         Float
+  economicImpact      Float
+  environmentalImpact Float
+  disapprovalReasons  String?  // JSON stringified array
+  feedbackText        String?
+
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  proposal            Proposal @relation(fields: [proposalId], references: [id], onDelete: Cascade)
+  
+  createdAt           DateTime @default(now())
+
+  @@unique([userId, proposalId])
+}

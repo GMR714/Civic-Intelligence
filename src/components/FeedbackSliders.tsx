@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sliders, Send, MessageSquare } from "lucide-react";
 import { useAuthStore } from "@/lib/store/authStore";
+import { submitVote } from "@/app/actions/proposals";
 
 interface FeedbackDimension {
   key: string;
@@ -89,9 +90,24 @@ export function FeedbackSliders({ proposalId, currentFeedback }: FeedbackSliders
     );
   };
 
-  const handleSubmit = () => {
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+  const handleSubmit = async () => {
+    if (!isConnected) return;
+    try {
+      await submitVote({
+        proposalId,
+        walletAddress: "0x7a3F...e92B", // Mocked as Wagmi isn't fully integrated yet, keeping the seed wallet
+        fairness: values.fairness,
+        feasibility: values.feasibility,
+        economicImpact: values.economicImpact,
+        environmentalImpact: values.environmentalImpact,
+        disapprovalReasons: selectedReasons,
+        feedbackText: textFeedback
+      });
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   if (!isConnected) {

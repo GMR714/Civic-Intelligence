@@ -12,6 +12,9 @@ The goal is to build a high-fidelity frontend MVP with Next.js mapping out a mul
 - [x] **Phase 3: Proposal Discovery & Detail Components** - Bento box UI for reading proposals
 - [x] **Phase 4: Feedback Mechanism** - Multi-dimensional dynamic voting UI
 - [x] **Phase 5: Analytics Dashboard Engine** - Data visualization and sentiment heatmaps
+- [ ] **Phase 6: Infraestrutura e Backend Integrado** - Prisma, SQLite DB e Server Actions
+- [ ] **Phase 7: Live AI Integration** - Geração de ELI5 dinâmicos e Extração de Tópicos (LLM)
+- [ ] **Phase 8: Web3 & Smart Contracts** - Registro de propostas on-chain e geração real de ZKP
 
 ## Phase Details
 
@@ -86,6 +89,33 @@ Plans:
 - [ ] 05-02: Build Dashboard Overview layout and Sentiment Heatmap.
 - [ ] 05-03: Implement Consensus Finder UI and Top Concerns List.
 
+### Phase 6: Infraestrutura e Backend Integrado
+**Goal**: Substituir a store mockada por um banco de dados real (Prisma + SQLite) e criar Next.js Server Actions para manipulação de dados.
+**Depends on**: Phase 5
+**Requirements**: Real backend integration
+**Success Criteria** (what must be TRUE):
+  1. Prisma configurado e rodando com schema definido.
+  2. Frontend listando e processando propostas via banco de dados ao invés do mockStateStore.
+**Plans**: TBD
+
+### Phase 7: Live AI Integration
+**Goal**: Integrar chamadas dinâmicas a um LLM.
+**Depends on**: Phase 6
+**Requirements**: Live AI LLM integration para ELI5 e Tópicos.
+**Success Criteria** (what must be TRUE):
+  1. ELI5 gerado nativamente consumindo IA invés de texto hardcoded.
+  2. Sumarização periódica dos comentários para gerar os "Consensus Prompts".
+**Plans**: TBD
+
+### Phase 8: Web3 & Smart Contracts
+**Goal**: Implementar a lógica Web3 completa para login e hash registry on-chain, bem como client-side ZKP.
+**Depends on**: Phase 7
+**Requirements**: Web3 Smart Contracts e ZKP real.
+**Success Criteria** (what must be TRUE):
+  1. Wagmi/RainbowKit gerenciando state da carteira.
+  2. Smart Contract armazenando metadados de projetos e votações em um Testnet.
+**Plans**: TBD
+
 ## Progress
 
 | Phase | Plans Complete | Status | Completed |
@@ -96,3 +126,6 @@ Plans:
 | 3. Discovery & Detail | 3/3 | Completed | 2026-04-14 |
 | 4. Feedback System | 2/2 | Completed | 2026-04-14 |
 | 5. Dashboard Engine | 3/3 | Completed | 2026-04-14 |
+| 6. Real Backend | 0/2 | Not started | - |
+| 7. Live AI | 0/2 | Not started | - |
+| 8. Web3 Smart Contracts | 0/2 | Not started | - |
